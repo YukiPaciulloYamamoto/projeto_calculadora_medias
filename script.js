@@ -50,7 +50,7 @@ function atualizaTabela(){
 function atualizaMediaFinal() {
     const mediaFinal = calculaMediaFinal();
 
-    document.getElementById('media-final-valor').innerHTML = mediaFinal; // puxando do HTML, colocando o valor na media final 
+    document.getElementById('media-final-valor').innerHTML = mediaFinal.toFixed(2); // puxando do HTML, colocando o valor na media final 
     document.getElementById('media-final-resultado').innerHTML = mediaFinal >= notaMinima ? spanAprovado : spanReprovado; // puxando do HTML, colocando o texto no final baseado na nota do aluno.
 }
 
