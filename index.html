@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de médias</title> 
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="Imagens/logo.png" alt="capelo e diploma"> <!-- Foto do cabeçalho -->
+            <h1>Calculadora de médias</h1>
+        </header>
+        <form id="form-atividade">
+            <input type="text" id="nome-atividade" required placeholder="Nome da atividade"> <!-- Nome da atividade -->
+            <input type="number" id="nota-atividade" required placeholder="Nota da atividade" min="0" max="10"> <!-- Nota minima e maxima do aluno -->
+            <button type="submit">Adicionar +</button> <!-- Botão com um + na frente -->
+        </form>
+        <table cellspacing="0"> <!-- Uma tabela || o cellspacing = 0 serve para tirar a formatação default da tabela (Sem isso ela fica com um espaço pequeno entre uma e outra) -->
+            <thead> <!-- Cabeçalho da tabela -->
+                <tr> <!-- Uma linha na tababela -->
+                    <th> <!-- Nomes das colunas -->
+                        Nome da atividade
+                    </th>
+                    <th>
+                        Nota da atividade
+                    </th>
+                    <th>
+                        Aprovado?
+                    </th>
+                </tr>
+            </thead>
+            <tbody> <!-- Corpo da tabela -->
+            </tbody>
+            <tfoot> <!-- Rodapé da tabela -->
+                <tr>
+                    <td> Média final</td>
+                    <td id="media-final-valor">---</td>
+                    <td id="media-final-resultado"><span class="resultado reprovado">---</span></td> <!-- Span é parecido com a DIV, porem, ele é utilizado em linha (Div é utilizada em bloco [Normalmente]) -->
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
